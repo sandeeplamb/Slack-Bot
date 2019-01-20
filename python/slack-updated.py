@@ -80,7 +80,7 @@ COMMON_TEMPLATE = """
         "text": "%(msg)s",
         "color": "#00ff00",
         "footer": "Powered by my Master, who given me LIFE.",
-        "bot-name": "@CasinoBotUserSlackApp"
+        "bot-name": "@botuser"
     }
 ]
 """
@@ -599,7 +599,7 @@ def get_meteor_check(x_re):
 def get_help(x_re):
     """ Gets the help of bot functions to use """
     helper_commands = """
-@CasinoBotUserSlackApp
+@botuser
 
         wttr CITY                  - gives weather report of your City
         giphy TEXT                 - gives you giphy
@@ -778,7 +778,7 @@ def handle_command(command_arg, channel_arg, user_name):
     """ Handles the commands from the channel. """
     default_response = ""
     message_reply = "```Not sure what you mean. Try @K8sBotUser "
-    #message_reply = "```Not sure what you mean. Try @CasinoBotUserSlackApp "
+    #message_reply = "```Not sure what you mean. Try @botuser "
 
     for x_cmd in COMD_LIST:
         default_response = message_reply + x_cmd + "```" + "\n" + default_response
